@@ -13,14 +13,22 @@
         var error = <%- JSON.stringify(error) %>;
         var link = <%- JSON.stringify(link) %>;
 
-        window.opener.postMessage(
-            {
-                session: session,
-                error: error,
-                link: link
-            },
-            'https://timer.pluscubed.com'
-        );
+        var originURL = <%- process.env.NODE_ENV === 'production' ?
+                prodTargetOrigin :
+                devTargetOrigin %>;
+
+        try {
+            window.opener.postMessage(
+                {
+                    session: session,
+                    error: error,
+                    link: link
+                },
+                originURL
+            );
+        } catch (err) {
+            console.log(err);
+        }
     }
     window.close();
 </script>
