@@ -12,9 +12,15 @@
         var session = <%- JSON.stringify(session) %>;
         var error = <%- JSON.stringify(error) %>;
         var link = <%- JSON.stringify(link) %>;
-        if (window.opener.superlogin && window.opener.superlogin.oauthSession) {
-            window.opener.superlogin.oauthSession(error, session, link);
-        }
+
+        window.opener.postMessage(
+            {
+                session: session,
+                error: error,
+                link: link
+            },
+            'https://timer.pluscubed.com'
+        );
     }
     window.close();
 </script>
