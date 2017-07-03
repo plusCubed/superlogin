@@ -13,7 +13,7 @@
         var error = <%- JSON.stringify(error) %>;
         var link = <%- JSON.stringify(link) %>;
 
-        var originURL = <%- process.env.NODE_ENV === 'production' ? prodTargetOrigin : devTargetOrigin %>;
+        var originURL = '<%= process.env.NODE_ENV === 'production' ? prodTargetOrigin : devTargetOrigin %>';
 
         try {
             window.opener.postMessage(
