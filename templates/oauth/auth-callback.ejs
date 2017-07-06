@@ -13,20 +13,14 @@
         var error = <%- JSON.stringify(error) %>;
         var link = <%- JSON.stringify(link) %>;
 
-        var originURL = '<%= process.env.NODE_ENV === 'production' ? prodTargetOrigin : devTargetOrigin %>';
-
-        try {
-            window.opener.postMessage(
-                {
-                    session: session,
-                    error: error,
-                    link: link
-                },
-                originURL
-            );
-        } catch (err) {
-            console.log(err);
-        }
+        window.opener.postMessage(
+            {
+                session: session,
+                error: error,
+                link: link
+            },
+          '<%- targetOrigin %>'
+        );
     }
     window.close();
 </script>
