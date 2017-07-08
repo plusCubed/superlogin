@@ -1,11 +1,11 @@
 {
-  "name": "superlogin",
-  "version": "0.6.1",
+  "name": "@pluscubed/superlogin",
+  "version": "0.7.1",
   "description": "Powerful authentication for APIs and single page apps using the CouchDB ecosystem which supports a variety of providers.",
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/colinskow/superlogin.git"
+    "url": "https://github.com/pluscubed/superlogin.git"
   },
   "engines": {
     "node": ">=4.0.0"
@@ -26,12 +26,12 @@
     "Node",
     "Express"
   ],
-  "author": "Colin Skow",
+  "author": "Daniel Ciao",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/colinskow/superlogin/issues"
+    "url": "https://github.com/pluscubed/superlogin/issues"
   },
-  "homepage": "https://github.com/colinskow/superlogin",
+  "homepage": "https://github.com/pluscubed/superlogin",
   "dependencies": {
     "bluebird": "^3.3.4",
     "couch-pwd": "github:zeMirco/couch-pwd",
