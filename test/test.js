@@ -8,7 +8,7 @@ chai.use(require('sinon-chai'));
 
 var BPromise = require('bluebird');
 global.Promise = BPromise;
-var PouchDB = require('pouchdb');
+var PouchDB = require('pouchdb-node');
 var seed = require('pouchdb-seed-design');
 var util = require('../lib/util.js');
 
