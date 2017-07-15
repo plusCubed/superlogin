@@ -1,5 +1,5 @@
 'use strict';
-var PouchDB = require('pouchdb-node');
+var PouchDB = require('pouchdb');
 var BPromise = require('bluebird');
 var seed = require('pouchdb-seed-design');
 var request = require('superagent');

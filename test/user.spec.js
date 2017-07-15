@@ -1,7 +1,7 @@
 'use strict';
 var events = require('events');
 var path = require('path');
-var PouchDB = require('pouchdb-node');
+var PouchDB = require('pouchdb');
 var BPromise = require('bluebird');
 var Configure = require('../lib/configure');
 var User = require('../lib/user');
